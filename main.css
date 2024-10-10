@@ -1,23 +1,105 @@
+/* General Styles */
 body {
   font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo h1 {
+  font-size: 2.4em;
+  color: #ff6f61;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  color: #ff6f61;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* Hero Section - Animated Gradient */
+.hero {
+  background: linear-gradient(45deg, #ff6f61, #007BFF);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero h2 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gradient-tool {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #121212;
-  margin: 0;
-  color: #e0e0e0;
+  padding: 40px 20px;
 }
 
 .container {
-  text-align: center;
   background: #1e1e1e;
   padding: 2em;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   margin: 20px;
+  text-align: center;
+}
+
+.container h2 {
+  margin-top: 0;
 }
 
 label {
@@ -28,17 +110,13 @@ label {
 .color-selectors {
   display: flex;
   justify-content: space-around;
-  align-items: center; /* Aligns the labels and inputs vertically */
+  align-items: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .color-selectors label {
   margin-right: 10px;
-}
-
-.color-selectors input[type="color"] {
-  margin-left: 5px;
 }
 
 #gradient-box {
@@ -104,4 +182,24 @@ button:hover {
 
 .presets button {
   margin: 5px;
+}
+
+.about,
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+.about h2,
+.contact h2 {
+  font-size: 2.2em;
+}
+
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 20px;
+  color: #e0e0e0;
+  font-size: 1em;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
 }
