@@ -15,9 +15,9 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Generate</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#gradient-tool">Generate</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -28,18 +28,16 @@
       <p>Use our tool to generate beautiful, customized gradients. Choose your colors, adjust the angle, and copy the CSS for your projects.</p>
     </section>
 
-    <section class="gradient-tool">
+    <section id="gradient-tool" class="gradient-tool">
       <div class="container">
         <h2>CSS Gradient Generator</h2>
-        <div class="color-selectors">
-          <label>Color 1:</label>
-          <input type="color" id="color1" value="#ff0000">
-          <label>Color 2:</label>
-          <input type="color" id="color2" value="#0000ff">
-          <label>Color 3:</label>
-          <input type="color" id="color3" value="#00ff00">
-          <label>Color 4:</label>
-          <input type="color" id="color4" value="#ffff00">
+
+        <!-- Color count toggle -->
+        <label for="colorCount">Number of Colors:</label>
+        <input type="number" id="colorCount" min="1" max="25" value="4">
+
+        <div class="color-selectors" id="colorSelectors">
+          <!-- Color inputs will be generated here -->
         </div>
 
         <label>Angle:</label>
@@ -58,6 +56,16 @@
           <button data-gradient="linear-gradient(120deg, #ff9a9e, #fad0c4)">Warm Pink</button>
         </div>
       </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>Gradient Wizard is a project designed to make generating custom CSS gradients simple and accessible for developers. Customize your gradients easily with up to 25 colors.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or feedback, feel free to reach out at: <a href="mailto:clowndeving@gmail.com">clowndeving@gmail.com</a></p>
     </section>
   </main>
 
