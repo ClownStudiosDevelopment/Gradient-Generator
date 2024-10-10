@@ -10,16 +10,31 @@
 <body>
   <div class="container">
     <h1>CSS Gradient Generator</h1>
-    <label>Color 1:</label>
-    <input type="color" id="color1" value="#ff0000">
-    <label>Color 2:</label>
-    <input type="color" id="color2" value="#0000ff">
+    <div class="color-selectors">
+      <label>Color 1:</label>
+      <input type="color" id="color1" value="#ff0000">
+      <label>Color 2:</label>
+      <input type="color" id="color2" value="#0000ff">
+      <label>Color 3:</label>
+      <input type="color" id="color3" value="#00ff00">
+      <label>Color 4:</label>
+      <input type="color" id="color4" value="#ffff00">
+    </div>
     <label>Angle:</label>
     <input type="range" id="angle" min="0" max="360" value="90">
 
     <div id="gradient-box"></div>
 
     <code id="css-code"></code>
+    <button id="copy-css">Copy CSS</button>
+
+    <h2>Preset Gradients:</h2>
+    <div class="presets">
+      <button data-gradient="linear-gradient(90deg, #ff6f61, #007BFF)">Red to Blue</button>
+      <button data-gradient="linear-gradient(45deg, #ff7e5f, #feb47b)">Sunset</button>
+      <button data-gradient="linear-gradient(120deg, #89f7fe, #66a6ff)">Cool Blues</button>
+      <button data-gradient="linear-gradient(120deg, #ff9a9e, #fad0c4)">Warm Pink</button>
+    </div>
   </div>
 
   <script src="main.js"></script>
