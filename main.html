@@ -8,34 +8,62 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="container">
-    <h1>CSS Gradient Generator</h1>
-    <div class="color-selectors">
-      <label>Color 1:</label>
-      <input type="color" id="color1" value="#ff0000">
-      <label>Color 2:</label>
-      <input type="color" id="color2" value="#0000ff">
-      <label>Color 3:</label>
-      <input type="color" id="color3" value="#00ff00">
-      <label>Color 4:</label>
-      <input type="color" id="color4" value="#ffff00">
+  <header>
+    <div class="logo">
+      <h1>Gradient Wizard</h1>
     </div>
-    <label>Angle:</label>
-    <input type="range" id="angle" min="0" max="360" value="90">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Generate</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div id="gradient-box"></div>
+  <main>
+    <section class="hero">
+      <h2>Create Custom CSS Gradients</h2>
+      <p>Use our tool to generate beautiful, customized gradients. Choose your colors, adjust the angle, and copy the CSS for your projects.</p>
+    </section>
 
-    <code id="css-code"></code>
-    <button id="copy-css">Copy CSS</button>
+    <section class="gradient-tool">
+      <div class="container">
+        <h2>CSS Gradient Generator</h2>
+        <div class="color-selectors">
+          <label>Color 1:</label>
+          <input type="color" id="color1" value="#ff0000">
+          <label>Color 2:</label>
+          <input type="color" id="color2" value="#0000ff">
+          <label>Color 3:</label>
+          <input type="color" id="color3" value="#00ff00">
+          <label>Color 4:</label>
+          <input type="color" id="color4" value="#ffff00">
+        </div>
 
-    <h2>Preset Gradients:</h2>
-    <div class="presets">
-      <button data-gradient="linear-gradient(90deg, #ff6f61, #007BFF)">Red to Blue</button>
-      <button data-gradient="linear-gradient(45deg, #ff7e5f, #feb47b)">Sunset</button>
-      <button data-gradient="linear-gradient(120deg, #89f7fe, #66a6ff)">Cool Blues</button>
-      <button data-gradient="linear-gradient(120deg, #ff9a9e, #fad0c4)">Warm Pink</button>
-    </div>
-  </div>
+        <label>Angle:</label>
+        <input type="range" id="angle" min="0" max="360" value="90">
+
+        <div id="gradient-box"></div>
+
+        <code id="css-code"></code>
+        <button id="copy-css">Copy CSS</button>
+
+        <h3>Preset Gradients</h3>
+        <div class="presets">
+          <button data-gradient="linear-gradient(90deg, #ff6f61, #007BFF)">Red to Blue</button>
+          <button data-gradient="linear-gradient(45deg, #ff7e5f, #feb47b)">Sunset</button>
+          <button data-gradient="linear-gradient(120deg, #89f7fe, #66a6ff)">Cool Blues</button>
+          <button data-gradient="linear-gradient(120deg, #ff9a9e, #fad0c4)">Warm Pink</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Clown Studios © 2024</p>
+  </footer>
 
   <script src="main.js"></script>
 </body>
