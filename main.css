@@ -16,7 +16,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
   width: 80%;
-  max-width: 400px;
+  max-width: 600px;
   margin: 20px;
 }
 
@@ -26,9 +26,15 @@ label {
   margin-right: 10px;
 }
 
+.color-selectors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Make it responsive */
+  margin-bottom: 20px;
+}
+
 .color-selectors input[type="color"] {
-  display: block;
-  margin: 10px auto;
+  margin: 10px;
 }
 
 #gradient-box {
