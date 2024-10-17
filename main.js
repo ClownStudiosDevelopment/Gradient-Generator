@@ -8,6 +8,12 @@ const colorCountInput = document.getElementById("colorCount");
 
 let colorInputs = [];
 
+// Function to generate random color
+function getRandomColor() {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  return `#${randomColor.padStart(6, '0')}`;
+}
+
 // Function to generate color inputs dynamically
 function generateColorInputs(count) {
   colorSelectors.innerHTML = ""; // Clear existing color inputs
@@ -16,7 +22,7 @@ function generateColorInputs(count) {
   for (let i = 1; i <= count; i++) {
     const colorInput = document.createElement("input");
     colorInput.type = "color";
-    colorInput.value = "#ffffff";
+    colorInput.value = getRandomColor(); // Set random color as default
     colorInput.id = `color${i}`;
     colorSelectors.appendChild(colorInput);
     colorInputs.push(colorInput);
@@ -59,8 +65,17 @@ colorCountInput.addEventListener("input", function () {
   generateColorInputs(this.value);
 });
 
-copyBtn.addEventListener("click", copyToClipboard);
-
 // Initial setup
 generateColorInputs(4);
 angle.addEventListener("input", updateGradient);
+
+// Set a random gradient on load
+function setRandomGradient() {
+  const colors = Array.from({ length: 4 }, getRandomColor).join(", ");
+  const gradient = `linear-gradient(${angle.value}deg, ${colors})`;
+  gradientBox.style.background = gradient;
+  cssCode.textContent = `background: ${gradient};`;
+}
+
+// Call the function to set a random gradient on page load
+setRandomGradient();
